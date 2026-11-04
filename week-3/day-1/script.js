@@ -14,18 +14,30 @@ console.log(exampleName, exampleYears, exampleIsOpen);
 console.log(typeof exampleName);     // typeof tells you the type
 
 // TODO: Make 3 variables for YOUR truck: a name, a number, and a true/false.
+// create 3 variables
+const truckName = "E's Food For The Soul";   // string (text)
+const yearsOpen = 2;              // number
+const isOpen = true;          // boolean (true or false)
+
 // TODO: console.log them, and log the typeof each one.
 
+// Log variables
+console.log(truckName, yearsOpen, isOpen);
+console.log(typeof truckName);     // typeof tells you the type
 
 // ---------- Step 2: An array (a list) ----------
 // Example:
 const exampleMenu = ["taco", "burrito", "nachos"];
-console.log(exampleMenu[0]);         // first item: index 0
-console.log(exampleMenu.length);     // how many items
+console.log(exampleMenu[0]);         // taco : index 0
+console.log(exampleMenu.length);     // 3
 
 // TODO: Make an array of 3 or more things YOUR truck sells.
-// TODO: Log the first item, the last item, and how many items there are.
+const eMenu = ["fish", "shrimp", "chicken"];
 
+// TODO: Log the first item, the last item, and how many items there are.
+console.log(eMenu[0]);    // fish : index 0
+console.log(eMenu[2]);   // chicken : index 2
+console.log(eMenu.length);   // 3
 
 // ---------- Step 3: An object (one thing with details) ----------
 // Example:
@@ -34,8 +46,13 @@ console.log(exampleItem.name);       // dot notation
 console.log(exampleItem["price"]);   // bracket notation
 
 // TODO: Make an object for one of YOUR menu items (name, price, spicy).
+
+const menuItem = { name: "fish", price: 15, spicy: true };
+
 // TODO: Log one property with dot notation and one with bracket notation.
 
+console.log(menuItem.name);   // dot notation
+console.log(menuItem["price"]);  // bracket notation
 
 // ---------- Step 4: A function ----------
 // Example:
@@ -45,8 +62,14 @@ function addTip(price, tip) {
 console.log(addTip(10, 2));          // 12
 
 // TODO: Write a function orderTotal(price, quantity) that RETURNS price * quantity.
+
+function orderTotal(price, quantity) {
+  return price * quantity;
+}
+
 // TODO: Before you run it, guess what orderTotal(4.5, 3) gives. Then log it.
 
+console.log(orderTotal(4.5, 3));
 
 // ---------- Extra practice (if you finish early) ----------
 // 1. Change your menu item's price AFTER you made the object, then log it again.
