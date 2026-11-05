@@ -15,8 +15,16 @@ const exampleTruck = {
 console.log("Step 1:", exampleTruck.describe());   // Welcome to Taco Rocket!
 
 // TODO: Make an object for YOUR truck with a name and a describe() method that uses this.name.
+
+const eTruck = {
+  name: "E's Food For The Soul",
+  describe: function () {
+    return "Welcome to " + this.name + "!";
+  },
+};
 // TODO: Log the result of calling describe().
 
+console.log(eTruck.describe());
 
 // ---------- Step 2: Compare with an arrow function ----------
 // Example:
@@ -29,7 +37,19 @@ const exampleArrowTruck = {
 console.log("Step 2:", exampleArrowTruck.describe());   // the name is missing!
 
 // TODO: Add an arrow-function version to YOUR truck and log it.
+
+const eArrowTruck = {
+  name: "E's Food For The Soul",
+  describe: () => {
+    return "Welcome to " + this.name + "!";
+  },
+};
+console.log(eArrowTruck.describe());
+
 // TODO: Write one sentence in a comment: what went wrong with the arrow version?
+
+// Didn't list the truck name.
+
 // (Hint: arrow functions don't get their own "this".)
 
 
@@ -44,6 +64,12 @@ console.log("Step 3 price:", exampleParsed.price);
 
 // TODO: Write a JSON string for one of YOUR menu items. Parse it. Log one property.
 
+const eJson = '{"name": "fish", "price": 15}';
+const eParsed = JSON.parse(eJson);
+console.log("text:", eJson);
+console.log("object:", eParsed)
+console.log("price", eParsed.price);
+
 
 // ---------- Step 4: JavaScript → JSON text ----------
 // Example:
@@ -52,6 +78,8 @@ console.log("Step 4:", exampleBack, typeof exampleBack);   // it's a string agai
 
 // TODO: Turn your parsed menu item back into a JSON string and log it with typeof.
 
+const eBack = JSON.stringify(eParsed);
+console.log(eBack, typeof eBack);
 
 // ---------- Extra practice (if you finish early) ----------
 // 1. Make a second truck object with its own describe() method.
