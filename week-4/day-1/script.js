@@ -8,10 +8,10 @@
 
 // First: replace this menu with YOUR truck's menu (keep the same shape).
 const menu = [
-  { name: "Taco", price: 4.5 },
-  { name: "Burrito", price: 9 },
-  { name: "Nachos", price: 6.25 },
-  { name: "Churro", price: 3 },
+  { name: "3pc fish", price: 15.99 },
+  { name: "12pc Shrimp", price: 17.99 },
+  { name: "3pc Chicken", price: 8.99 },
+  { name: "16oz Gumbo", price: 9.99 },
 ];
 
 
@@ -32,6 +32,14 @@ menu.forEach(logName);
 
 // YOUR TURN: log every item's PRICE.
 // Change: logName → logPrice (2 places), and .name → .price
+for (let i = 0; i < menu.length; i++) {
+  console.log(menu[i].price);
+}
+
+function logPrice(item) {
+  console.log(item.price);
+}
+menu.forEach(logPrice);
 
 
 // ---------- Step 2: Write the function right inside ----------
@@ -44,7 +52,9 @@ menu.forEach(function (item) {
 
 // YOUR TURN: log "Taco costs $4.5", "Burrito costs $9"...
 // Change: " is on the menu" → " costs $" + item.price
-
+menu.forEach(function (item) {
+  console.log(item.name + " costs $" + item.price);
+});
 
 // ---------- Step 3: Put the menu on the page ----------
 // EXAMPLE: puts every NAME on the page, one per line.
@@ -52,7 +62,7 @@ menu.forEach(function (item) {
 const menuText = document.querySelector("#menu-text");
 menuText.textContent = "";
 menu.forEach(function (item) {
-  menuText.textContent = menuText.textContent + item.name + "\n";
+  menuText.textContent = menuText.textContent + item.name + ": $" + item.price + "\n";
 });
 
 // YOUR TURN: don't copy this one. Change the example above,
@@ -71,3 +81,8 @@ console.log("Items:", count);
 
 // YOUR TURN: add up every PRICE into a total. Log it.
 // Change: count → total, and + 1 → + item.price
+let total = 0;
+menu.forEach(function (item) {
+  total = total + 1;
+});
+console.log("Items:", count);
