@@ -6,7 +6,7 @@ Write `{{gemini_key}}` (the variable's name) instead.
 
 | | Weather request | AI request | Add a dish |
 | --- | --- | --- | --- |
-| Method (GET / POST) | | | |
+| Method (GET / POST) | Get | Post| |
 | Endpoint (the address, filled in for you) | `https://api.open-meteo.com/v1/forecast` | `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.8-flash:generateContent` | `https://dummyjson.com/recipes/add` |
 | Where the details go (query params or body?) | | | |
 | Headers I needed | | | |
